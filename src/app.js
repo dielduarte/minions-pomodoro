@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-class Layout extends React.Component {
+class PomodoroReactive extends React.Component {
   render() {
     return (
-      <h1>Hello</h1>
+      <h1>Pormodo reactive WIP</h1>
     );
   }
 }
 
-ReactDom.render(<Layout/>, document.getElementById('app'));
+ReactDom.render(<PomodoroReactive />, document.getElementById('app'));
