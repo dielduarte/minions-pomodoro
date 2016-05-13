@@ -2,7 +2,11 @@ import React from "react";
 import ReactDom from "react-dom";
 import CircularProgress from 'material-ui/lib/circular-progress';
 import moment from "moment";
-
+import Card from 'material-ui/lib/card/card';
+import CardHeader from 'material-ui/lib/card/card-header';
+import CardText from 'material-ui/lib/card/card-text';
+import CardActions from 'material-ui/lib/card/card-actions';
+import FlatButton from 'material-ui/lib/flat-button';
 
 class Timer extends React.Component {
 
@@ -58,10 +62,26 @@ class Timer extends React.Component {
     }
 
     render() {
+        const styles = {
+            'margin': '0 auto'
+        };
+
         return (
             <div>
-                <CircularProgress mode="determinate" value={this.state.circularValue} size="5"/>
-                {this.showTime(this.state.time)}
+                <Card>
+                    <CardHeader
+                        title="Pomodoro reactive"
+                    />
+                    <CardText>
+                        <CircularProgress styles={styles} mode="determinate" value={this.state.circularValue} size="5"/>
+                        {this.showTime(this.state.time)}
+                    </CardText>
+                    <CardActions>
+                        <FlatButton label="Action1" />
+                        <FlatButton label="Action2" />
+                    </CardActions>
+                </Card>
+
             </div>
         );
     }
