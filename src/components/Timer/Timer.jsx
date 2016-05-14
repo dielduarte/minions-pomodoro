@@ -7,6 +7,8 @@ import CardHeader from 'material-ui/lib/card/card-header';
 import CardText from 'material-ui/lib/card/card-text';
 import CardActions from 'material-ui/lib/card/card-actions';
 import FlatButton from 'material-ui/lib/flat-button';
+import SvgIcon from 'material-ui/lib/svg-icon';
+
 
 class Timer extends React.Component {
 
@@ -63,22 +65,41 @@ class Timer extends React.Component {
 
     render() {
         const styles = {
-            'margin': '0 auto'
+            card: {
+                'margin': '0 auto',
+                'width': '320px'
+            },
+            counter: {
+                'margin': '150px 135px',
+            },
+            time: {
+                'position': 'relative',
+                'margin': '0 auto',
+                'display': 'block',
+                'width': '100px',
+                'text-align': 'center',
+                'font-size': '40px',
+                'top': '-191px',
+            }
         };
 
         return (
             <div>
-                <Card>
+                <Card style={styles.card}>
                     <CardHeader
                         title="Pomodoro reactive"
                     />
-                    <CardText>
-                        <CircularProgress styles={styles} mode="determinate" value={this.state.circularValue} size="5"/>
-                        {this.showTime(this.state.time)}
-                    </CardText>
+                    <div>
+                        <CircularProgress style={styles.counter} mode="determinate" value={this.state.circularValue} size="5"/>
+                        <span style={styles.time}>
+                            {this.showTime(this.state.time)}
+                        </span>
+                    </div>
                     <CardActions>
-                        <FlatButton label="Action1" />
-                        <FlatButton label="Action2" />
+                        <FlatButton
+                            label="Play" />
+                        <FlatButton
+                            label="Stop"/>
                     </CardActions>
                 </Card>
 
