@@ -6,7 +6,7 @@ import Timer from "./components/Timer/Timer.jsx";
 import injectTapEventPlugin from 'react-tap-event-plugin';
 injectTapEventPlugin();
 
-class PomodoroReactive extends React.Component {
+class MinionsPomodoro extends React.Component {
   render() {
     return (
      <div> <Timer /> </div>
@@ -14,4 +14,4 @@ class PomodoroReactive extends React.Component {
   }
 }
 
-ReactDom.render(<PomodoroReactive />, document.getElementById('app'));
+ReactDom.render(<MinionsPomodoro />, document.getElementById('app'));

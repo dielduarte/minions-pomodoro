@@ -1,5 +1,5 @@
 {
-  "name": "pomodoro-reactive",
+  "name": "minions-pomodoro",
   "version": "0.1.0",
   "description": "a simple pomodoro build with react + flux",
   "license": "MIT",
@@ -9,7 +9,8 @@
     "email": "magdiel.kesller@gmail.com"
   },
   "scripts": {
-    "start": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot"
+    "start": "./node_modules/.bin/webpack-dev-server --content-base src --inline --hot",
+    "build": "./node_modules/.bin/webpack -p"
   },
   "devDependencies": {
     "babel-loader": "^6.2.0",
