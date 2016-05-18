@@ -128,14 +128,14 @@ class Timer extends React.Component {
                 <Card style={styles.card}>
                     <CardHeader title="Minions pomodoro">
                         <div style={styles.timersButtons}>
-                            <IconButton onClick={() => this.setTime(1500)}>
+                            <IconButton tooltip="Work Time" onClick={() => this.setTime(1500)}>
                                 <WorkIcon />
                             </IconButton>
-                            <IconButton onClick={() => this.setTime(300)}>
+                            <IconButton tooltip="Coffee Time" onClick={() => this.setTime(300)}>
                                 <RestaurantIcon />
                             </IconButton>
 
-                            <IconButton onClick={() => this.setTime(900)}>
+                            <IconButton tooltip="Sleep Time" onClick={() => this.setTime(900)}>
                                 <AirlineIcon />
                             </IconButton>
                         </div>
