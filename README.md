@@ -1,3 +1,3 @@
 # pomodoro-reactive
 
-> a simple pomodoro build with react + flux
+> a simple pomodoro done with react + flux

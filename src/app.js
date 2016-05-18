@@ -1,12 +1,17 @@
 import React from "react";
 import ReactDom from "react-dom";
+import Timer from "./components/Timer/Timer.jsx";
 
-class Layout extends React.Component {
+
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
+
+class MinionsPomodoro extends React.Component {
   render() {
     return (
-      <h1>Hello</h1>
+     <div> <Timer /> </div>
     );
   }
 }
 
-ReactDom.render(<Layout/>, document.getElementById('app'));
+ReactDom.render(<MinionsPomodoro />, document.getElementById('app'));
